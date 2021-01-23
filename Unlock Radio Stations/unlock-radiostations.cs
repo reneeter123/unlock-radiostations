@@ -18,7 +18,7 @@ namespace Unlock_Radio_Stations
         private void GetSettings()
         {
             // Get the ini configuration
-            var ini = ScriptSettings.Load(@"scripts\unlock-all-radiostations.ini");
+            var ini = ScriptSettings.Load(@"scripts\unlock-radiostations.ini");
 
             var stations = ini.GetValue<string>("Settings", "UnlockedRadioStations", "").Split(',');
             unlockedRadioStations.AddRange(stations);
