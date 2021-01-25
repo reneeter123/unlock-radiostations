@@ -1,3 +1,3 @@
 # Unlock Radio Stations
 
-Unlock any radio stations.
+Unlock all radio stations and any track list.
