@@ -42,7 +42,4 @@
     <PackageReference Include="ScriptHookVDotNet3" Version="*" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>copy "$(ProjectDir)unlock-radiostations.ini" "$(TargetDir)" /Y</PostBuildEvent>
-  </PropertyGroup>
 </Project>
