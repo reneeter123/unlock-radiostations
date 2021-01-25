@@ -1,6 +1,7 @@
 ﻿using GTA;
 using GTA.Native;
 using System;
+using System.Linq;
 
 namespace Unlock_Radio_Stations
 {
@@ -9,8 +10,7 @@ namespace Unlock_Radio_Stations
         public Main()
         {
             // Unlock Radio Stations
-            int nowRadioStationsNum;
-            int maxRadioStationsNum;
+            bool isContinue;
 
             do
             {
@@ -21,10 +21,12 @@ namespace Unlock_Radio_Stations
                     Function.Call(Hash._LOCK_RADIO_STATION, radioStationName, false);
                 }
 
-                nowRadioStationsNum = Function.Call<int>(Hash.GET_NUM_UNLOCKED_RADIO_STATIONS);
-                maxRadioStationsNum = Enum.GetNames(typeof(RadioStation)).Length;
+                var nowRadioStationsNum = Function.Call<int>(Hash.GET_NUM_UNLOCKED_RADIO_STATIONS);
+                var maxRadioStationsNum = Enum.GetNames(typeof(RadioStation)).Length;
+
+                isContinue = !Enumerable.Range(maxRadioStationsNum - 2, maxRadioStationsNum).Contains(nowRadioStationsNum);
             }
-            while (nowRadioStationsNum == maxRadioStationsNum);
+            while (isContinue);
         }
     }
 }
