@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // 制御されます。アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
 [assembly: AssemblyTitle("Unlock Radio Stations")]
-[assembly: AssemblyDescription("Unlock any radio stations.")]
+[assembly: AssemblyDescription("Unlock all radio stations.")]
 [assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Unlock Radio Stations")]
